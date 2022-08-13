@@ -52,7 +52,7 @@ function refresh() {
 
   setTimeout(function () {
     container.classList.remove("ativo");
-  }, 1000);
+  }, 500);
 }
 
 btnAnimation.addEventListener("click", refresh);
