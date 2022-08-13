@@ -105,14 +105,16 @@ body {
 }
 
 .ativo {
-  animation: imagens .5s ease-in;
+  animation: imagens 5s ease-in;
 }
 
 @keyframes imagens {
-  from {
+  0% {
     opacity: 0;
+    transform: translateZ(-5rem);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateZ(0px);
   }
 }

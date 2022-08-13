@@ -43,8 +43,16 @@ function ativarHora() {
 ativarHora();
 
 const btnAnimation = document.getElementsByClassName("btn-hora")[0];
+const container = document.getElementsByClassName("container")[0];
+
+console.log(container);
 
 function refresh() {
-  document.documentElement.classList.toggle("ativo");
+  container.classList.add("ativo");
+
+  setTimeout(function () {
+    container.classList.remove("ativo");
+  }, 1000);
 }
+
 btnAnimation.addEventListener("click", refresh);
