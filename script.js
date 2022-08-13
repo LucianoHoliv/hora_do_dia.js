@@ -41,3 +41,10 @@ function ativarHora() {
 }
 
 ativarHora();
+
+const btnAnimation = document.getElementsByClassName("btn-hora")[0];
+
+function refresh() {
+  document.documentElement.classList.toggle("ativo");
+}
+btnAnimation.addEventListener("click", refresh);
