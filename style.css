@@ -20,9 +20,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  height: 600px;
-  padding: 10px;
+  width: fit-content;
+  overflow-x: hidden;
   align-items: center;
 }
 
@@ -30,15 +29,16 @@ body {
   display: flex;
   gap: 15px;
   align-items: center;
-  justify-self: flex-end;
-  margin-top: 50px;
+  margin: 30px 0;
 }
 
 .horario p {
-  background-color: black;
+  background: rgb(79, 67, 67);
   padding: 0 0 0 10px;
   border-radius: 20px;
   border: 2px solid rgb(5, 5, 5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .horario input {
@@ -48,22 +48,8 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 0.95rem;
   text-align: center;
-}
-
-.horario button {
-  padding: 4px;
-  border-radius: 50%;
-  max-width: 48px;
-  max-height: 48px;
-  background: rgb(255, 255, 255);
-  color: #fff;
-  border: 1px solid;
-  font-size: 1rem;
-}
-
-.horario button:hover {
-  background: rgb(19, 90, 29);
-  border: 1px solid rgb(255, 255, 255);
+  background: rgb(171, 171, 171);
+  border: 1px solid rgb(5, 5, 5);
 }
 
 .box {
@@ -74,7 +60,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 8px 0;
-  padding: 10px;
+  padding: 30px 60px;
   color: rgb(26, 26, 26);
   font-weight: 500;
   background: rgba(255, 255, 255, 0.2);
@@ -88,13 +74,15 @@ body {
 #texto-hora {
   font-size: 1.5rem;
   background-color: antiquewhite;
-  padding: 10px;
+  text-align: center;
+  padding: 10px 15px;
   border-radius: 10px;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.486);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.39);
+  width: 100%;
 }
 
 .imagem {
@@ -132,5 +120,19 @@ body {
     -webkit-transform: translateZ(0) translateY(0);
     transform: translateZ(0) translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    font-size: 0.8rem;
+  }
+
+  #texto-hora {
+    font-size: 1rem;
+  }
+
+  .imagem {
+    width: fit-content;
   }
 }
