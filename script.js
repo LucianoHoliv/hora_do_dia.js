@@ -2,12 +2,22 @@ function ativarHora() {
   const texto = document.getElementById("texto-hora");
   const imagem = document.getElementsByClassName("imagem")[0];
   const date = new Date();
-  const hora = date.getHours();
-  const minutos = date.getMinutes();
+  let hora = date.getHours();
+  let minutos = date.getMinutes();
+
+  if (hora >= "0" && hora <= "9") {
+    hora = `0${hora}`;
+  }
+
+  if (minutos >= "0" && minutos <= "9") {
+    minutos = `0${minutos}`;
+  }
+
   let horaMin = `${hora}:${minutos}`;
   let saudacao = "Olá, ";
   let emoji = "🌞";
 
+  console.log(hora, minutos);
   const horaManual = document.getElementById("horaManual").value;
   if (horaManual.length != 0) {
     horaMin = horaManual;
