@@ -145,6 +145,9 @@ body {
 
   .horario {
     margin: 15px 0;
-    max-width: 300px;
+  }
+
+  #horaManual {
+    max-width: 85px;
   }
 }
