@@ -13,7 +13,7 @@ function ativarHora() {
     horaMin = horaManual;
   }
 
-  if (horaMin >= "00:00" && horaMin < "06:59") {
+  if (horaMin >= "00:00" && horaMin <= "06:59") {
     saudacao = "Madrugouu";
     emoji = "🌚";
     imagem.src = "img/dawn.jpg";
