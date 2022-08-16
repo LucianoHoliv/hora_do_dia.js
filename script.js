@@ -5,10 +5,12 @@ function ativarHora() {
   let hora = date.getHours();
   let minutos = date.getMinutes();
 
+  // Validação para incluir zero a esquerda e deixar a hora igual ao do input
   if (hora >= "0" && hora <= "9") {
     hora = `0${hora}`;
   }
 
+  // Validação para incluir zero a esquerda e deixar o minuto igual ao do input
   if (minutos >= "0" && minutos <= "9") {
     minutos = `0${minutos}`;
   }
@@ -17,7 +19,6 @@ function ativarHora() {
   let saudacao = "Olá, ";
   let emoji = "🌞";
 
-  console.log(hora, minutos);
   const horaManual = document.getElementById("horaManual").value;
   if (horaManual.length != 0) {
     horaMin = horaManual;
